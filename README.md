@@ -6,9 +6,26 @@ Our gut tells us the right answer is just whatever movie Dwayne Johnson wants to
 
 But I guess we can look at data.
 
-This project can be subdivided into four steps (as of this moment):
+This project can be subdivided into four steps:
+* Step 1 -- Find and source movie data (Data Extraction)
+* Step 2 -- Data Cleaning
+* Step 3 -- Data Analysis and Visualization -- Domestic Movies
+* Step 4 -- Data Analysis and Visualization -- Worldwide Movies
+
+## Easiest Way To View This Project
+
+You can clone or download the repo and run the Jupyter Notebook files within the folders. Alternatively, you can open the HTML files in the folders to view the project without being able to interact with it.
+
+The main files to look at are:
+1) Data_Cleaning.ipynb / Data_Cleaning.html
+2) Domestic.ipynb / Domestic.html
+3) Worldwide.ipynb / Worldwide.html
+
+A more thorough walkthrough of the project is presented below.
 
 ## Step 1 -- Find and source movie data
+
+All files related to data sourcing and extraction are located in the `1. Data Extraction` folder.
 
 While researching good sources of movie data, I found two websites: [The Numbers](https://www.the-numbers.com/) and [Box Office Mojo](https://www.boxofficemojo.com/). 
 Both of these have a wealth of information about movies, such as production budget, genre, domestic box office, and worldwide box office
@@ -27,11 +44,13 @@ The type of data I collected from each website includes the following:
 
 I performed some initial data cleanup, such as converting numeric data stored as strings into numeric data types, then saved the data to csv files: `the_numbers_movie_data.csv` and `movie_data.csv`.
 
-## Step 2 -- Data cleaning
+## Step 2 -- Data Cleaning
 
-The bulk of the data cleaning was performed in the `Data_Cleaning.ipynb` notebook. 
+All files related to data cleaning are located in the `2. Data Cleaning` folder.
 
-The steps include:
+The bulk of the data cleaning was performed in the `Data_Cleaning.ipynb` notebook. If you have trouble properly viewing the `Data_Cleaning.ipynb` file, you can open the `Data_Cleaning.html` file instead. They contain the same contents.
+
+The data cleaning steps include:
 
 1) Importing the two datasets and finishing up any datatype conversions.
 
@@ -55,9 +74,11 @@ We compared the results of both conversions. Using the CPI method resulted in le
 
 8) Saving the output to `cleaned_movie_data.csv`.
 
-## Step 3 -- Data Analysis -- Domestic Movies
+## Step 3 -- Data Analysis and Visualization -- Domestic Movies
 
-In the `Domestic.ipynb` notebook, we analyze the domestic box office performance of movies, grouped into one of six main genres: Action, Adventure, Comedy, Drama, Horror, and Thriller/Suspense. Obviously, there are more genres, but if we don't simplify it, we run the risk of getting lost in genre soup.
+All data analysis and visualization files are located in the `3. Data Analysis and Visualization` folder.
+
+In the `Domestic.ipynb` notebook (or `Domestic.html` if having trouble viewing `Domestic.ipynb`), we analyze the domestic box office performance of movies, grouped into one of six main genres: Action, Adventure, Comedy, Drama, Horror, and Thriller/Suspense. Obviously, there are more genres, but if we don't simplify it, we run the risk of getting lost in genre soup.
 
 We only look at movies released by the Big 5 studios (Universal, Disney, Paramount, Sony, and Warner Bros.) to prevent lack of budget or marketing affecting a movie's chance of success. All movies can fail, but one from a major studio has the best leg up, so to speak.
 
@@ -69,9 +90,11 @@ We find that from an reward-based outlier perspective (i.e. making the most mone
 
 The genres least affected by release week are Comedy and Drama. If the studio is worried about fighting for prime release weeks, these genres are the easiest to plug and play throughout the year.
 
-## Step 4 -- Data Analysis -- Worldwide Movies
+## Step 4 -- Data Analysis and Visualization -- Worldwide Movies
 
-In the `Worldwide.ipynb` notebook, we analyze the worldwide box office performance of movies, again grouped into one of the six main genres.
+All data analysis and visualization files are located in the `3. Data Analysis and Visualization` folder.
+
+In the `Worldwide.ipynb` notebook (or `Worldwide.html` if having trouble viewing `Worldwide.ipynb`), we analyze the worldwide box office performance of movies, again grouped into one of the six main genres.
 
 The inclusion of the rest of the world's money doesn't change much in terms of our recommendations to our bosses.
 
